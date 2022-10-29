@@ -15,13 +15,13 @@
         width: 100%;
         border: 2px solid black;
       }
-
+      
       .label-container {
         width: fit-content;
         /* border: 2px solid orangered; */
         padding: 20px;
       }
-      
+
       .label-container > label {
         font-size: large;
       }
@@ -99,67 +99,23 @@
     <!-- // -->
     <!-- // -->
     <!-- // -->
+
     <script type="text/javascript">
+      //
       function GenerateUserData() {
         // clean output element
         document.getElementById("output1").innerHTML = "";
 
         // each email is unique
         user_emails.forEach((email, i) => {
+          //
           if (i) {
-            //
 
-            // users.push({
-            //   data: {
-            //     firstName: "",
-            //     lastName: "",
-            //     email: email,
-            //   },
-            //   clicks: {
-            //     clicksCount: 0,
-            //     clicksOnPage: {
             //
-            //         home: 0,
-            //         store: 0,
-            //         contactUs: 0,
-            //         aboutUs: 0,
-            //         services: 0,
-            //
-            //     },
-            //   },
-            //   likes: {
-            //     what: "nothing",
-            //   },
-            // });
-
-            // output
-            // email
-            // document.getElementById("output1").innerHTML += "\n";
-            // document.getElementById("output1").innerHTML += "email: " + email;
-
-            // firstName
-            // document.getElementById("output1").innerHTML += "\n";
             const firstName = email.substring(0, email.search("@") - 1);
-            // document.getElementById("output1").innerHTML +=
-            // "firstName: " + firstName;
-            //
-
-            // lastName
-            // document.getElementById("output1").innerHTML += "\n";
+            // 
             const lastName = firstName;
-            // document.getElementById("output1").innerHTML +=
-            // "lastName: " +
-            // email.substring(email.search("@") + 1, email.search("com") - 1);
             //
-
-            // clicksCount
-            // document.getElementById("output1").innerHTML += "\n";
-            // document.getElementById("output1").innerHTML +=
-            //   "clicksCount: " + Rand(2);
-            //
-
-            // clicksOnPage
-            // document.getElementById("output1").innerHTML += "\n";
             const clicksOnPage = {
               home: Rand(1),
               store: Rand(1),
@@ -167,10 +123,6 @@
               aboutUs: Rand(1),
               services: Rand(1),
             };
-            // document.getElementById("output1").innerHTML +=
-            //   "clicksOnPage: " + JSON.stringify(clicksOnPage);
-            //
-
             //
             // mostViewed
             const categories = [
@@ -191,10 +143,6 @@
               mostViewed.push([cat, Rand(1)]);
             });
 
-            // document.getElementById("output1").innerHTML +=
-            //   "mostViewed: " + JSON.stringify(mostViewed);
-
-            // document.getElementById("output1").innerHTML += "\n\n\n";
             //
             document.getElementById("output1").innerHTML +=
               JSON.stringify({
