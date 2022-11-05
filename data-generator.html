@@ -57,21 +57,92 @@
   </head>
 
   <body>
-    <!-- your content ends here... -->
+    <!-- content ends here... -->
 
     <div class="main">
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- data header -->
       <div class="label-container">
-        <label>DATA:</label>
+        <h1>GENERATE USER DATA</h1>
       </div>
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- field choices -->
+      <div class="label-container">
+        <h2>FIELDS</h2>
+        <br/>
+        <!-- user email -->
+        <input type="checkbox" name="user_email"/>
+        <label for="user_email">Email</label>
+        <br/>
+        <!-- first name -->
+        <input type="checkbox" name="user_firstName"/>
+        <label for="user_firstName">First Name</label>
+        <br/>
+        <!-- last name -->
+        <input type="checkbox" name="user_lastName"/>
+        <label for="user_lastName">Last Name</label>
+        <br/>
+        <br/>
+        <br/>
+        <!-- number of clicks on a page -->
+        <label for="user_clicksCountOnPage">Create a page and the number of clicks you want per page.</label>
+        <br />
+        <br />
+        <label>
+          Pages:
+          <div id="web_pages_div" >
+            <ul id="web_pages_ul">
+            </ul>
+          </div>
+        </label>
+        <br />
+        <label for="user_home">Page Name:</label>
+        <br />
+        <input type="text" name="user_home" min="0" placeholder="Page name ..."/> 
+        <br />
+        <br />
+        <label for="user_home">Number of clicks on page:</label>
+        <br />
+        <input type="number" name="user_home" min="0"/>
+        <br />
+        <br />
+        <br />
+        <button>Create Page</button>
+        <br />
+        <br />
+        <br />
+        <br />
+        <label for="user_mostViewedTags">Most Viewed Tags:</label>
+        <br />
+        <input type="text" name="user_mostViewedTags" min="0"/>
+        <br />
+        <button>Add Tag</button>
+      </div>
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- Generate User Data button -->
       <div class="button-container">
         <button onclick="GenerateUserData()">GENERATE USER DATA</button>
       </div>
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- ================== -->
+      <!-- Output element -->
       <div class="output-container">
         <textarea rows="50" id="output1"></textarea>
       </div>
     </div>
 
-    <!-- your content ends here... -->
+    <!-- content ends here... -->
 
     <!-- // -->
     <!-- // -->
@@ -127,7 +198,7 @@
             // mostViewed
             const categories = [
               "education",
-              "family & fun",
+              "family and fun",
               "music",
               "art",
               "technology",
@@ -159,8 +230,8 @@
         //
       }
 
-      // generate random number
       function Rand(digits) {
+      // generate random checkbox
         const randomNumber = Math.random();
         return randomNumber
           .toString()
